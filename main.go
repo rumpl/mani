@@ -35,11 +35,11 @@ func run(args []string) error {
 	if err != nil {
 		return err
 	}
+
 	return nil
 }
 
 func createResolver() remotes.Resolver {
-
 	return docker.NewResolver(docker.ResolverOptions{
 		Authorizer: docker.NewDockerAuthorizer(),
 		PlainHTTP:  false,
@@ -56,6 +56,7 @@ func fetch(ctx context.Context, ref reference.Named, resolver remotes.Resolver) 
 	if err != nil {
 		return err
 	}
+
 	reader, err := fetcher.Fetch(ctx, indexDescriptor)
 	if err != nil {
 		return err

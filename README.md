@@ -11,6 +11,11 @@ $ make
 ## Use
 
 ```shell
+$ ./mani rumpl/loge:latest
+{
+  "schemaVersion": 2,
+  "manifests": null
+}
 $ ./mani nginx:latest
 {
   "schemaVersion": 2,
